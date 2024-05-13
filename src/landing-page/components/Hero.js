@@ -2,14 +2,16 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import InputLabel from "@mui/material/InputLabel";
-import Link from "@mui/material/Link";
+// import InputLabel from "@mui/material/InputLabel";
+// import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
+// import TextField from "@mui/material/TextField";
+// import Typography from "@mui/material/Typography";
 
-import { visuallyHidden } from "@mui/utils";
+// import { visuallyHidden } from "@mui/utils";
 import { styled } from "@mui/material/styles";
+import IngeniusLogo from "../../images/ingenius-logo.jpeg";
+import ingeniusFondo from "../../images/shaping-future.jpg";
 
 const StyledBox = styled("div")(({ theme }) => ({
   alignSelf: "center",
@@ -24,7 +26,7 @@ const StyledBox = styled("div")(({ theme }) => ({
   outline: "1px solid",
   backgroundImage: `url(${
     theme.palette.mode === "light"
-      ? "/static/images/templates/templates-images/hero-light.png"
+      ? ingeniusFondo
       : "/static/images/templates/templates-images/hero-dark.png"
   })`,
   backgroundSize: "cover",
@@ -37,6 +39,19 @@ const StyledBox = styled("div")(({ theme }) => ({
     height: 700,
   },
 }));
+
+const scrollToSection = (sectionId) => {
+  const sectionElement = document.getElementById(sectionId);
+  const offset = 128;
+  if (sectionElement) {
+    const targetScroll = sectionElement.offsetTop - offset;
+    sectionElement.scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({
+      top: targetScroll,
+      behavior: "smooth",
+    });
+  }
+};
 
 export default function Hero() {
   return (
@@ -66,71 +81,21 @@ export default function Hero() {
           useFlexGap
           sx={{ width: { xs: "100%", sm: "70%" } }}
         >
-          <Typography
-            variant="h1"
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              alignItems: "center",
-              fontSize: "clamp(3rem, 10vw, 3.5rem)",
-            }}
-          >
-            Our&nbsp;latest&nbsp;
-            <Typography
-              component="span"
-              variant="h1"
-              sx={{
-                fontSize: "inherit",
-                color: (theme) =>
-                  theme.palette.mode === "light"
-                    ? "primary.main"
-                    : "primary.light",
-              }}
-            >
-              products
-            </Typography>
-          </Typography>
-          <Typography
-            textAlign="center"
-            color="text.secondary"
-            sx={{ width: { sm: "100%", md: "80%" } }}
-          >
-            Explore our cutting-edge dashboard, delivering high-quality
-            solutions tailored to your needs. Elevate your experience with
-            top-tier features and services.
-          </Typography>
+          <img src={IngeniusLogo} alt="MDN" style={{ width: "100%" }} />
           <Stack
             direction={{ xs: "column", sm: "row" }}
             spacing={1}
             useFlexGap
             sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
           >
-            <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
-              Email
-            </InputLabel>
-            <TextField
-              id="email-hero"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              inputProps={{
-                autoComplete: "off",
-                "aria-label": "Enter your email address",
-              }}
-            />
-            <Button variant="contained" color="primary">
-              Start now
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => scrollToSection("features")}
+            >
+              Cuentame más
             </Button>
           </Stack>
-          <Typography variant="caption" textAlign="center">
-            By clicking &quot;Start now&quot; you agree to our&nbsp;
-            <Link href="#" color="primary">
-              Terms & Conditions
-            </Link>
-            .
-          </Typography>
         </Stack>
         <StyledBox id="image" />
       </Container>

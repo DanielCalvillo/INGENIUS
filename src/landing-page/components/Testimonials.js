@@ -1,85 +1,89 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardContent from '@mui/material/CardContent';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/system';
+import * as React from "react";
+import Card from "@mui/material/Card";
+// import CardHeader from "@mui/material/CardHeader";
+import CardContent from "@mui/material/CardContent";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+// import { useTheme } from "@mui/system";
+import DiseñoMecanismos from "../../images/diseñomecanismos.jpeg";
+import optimizacionIndustria from "../../images/optimizacionenindustria.jpeg";
+import laboratorioITC from "../../images/laboratorioitc.jpeg";
+import cultivoVegetal from "../../images/cultivovegetal.jpeg";
+import bioReaccion from "../../images/bioreaccion.jpeg";
+import analisisSensorial from "../../images/analisissensorial.jpeg";
+import creayProgramaRobot from "../../images/creaprogramayrobot.jpeg";
 
 const userTestimonials = [
   {
     avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />,
-    name: 'Remy Sharp',
-    occupation: 'Senior Engineer',
+    name: "Remy Sharp",
+    occupation: "Senior Engineer",
     testimonial:
-      "I absolutely love how versatile this product is! Whether I'm tackling work projects or indulging in my favorite hobbies, it seamlessly adapts to my changing needs. Its intuitive design has truly enhanced my daily routine, making tasks more efficient and enjoyable.",
+      "Descubre los principios fundamentales y las técnicas avanzadas en el diseño de mecanismos en este taller intensivo. Bajo la guía experta del Dr. Luis Álvarez, explorarás desde conceptos básicos hasta aplicaciones complejas utilizadas en la industria moderna. A través de ejercicios prácticos y discusiones teóricas, este taller te equipará con las habilidades necesarias para diseñar mecanismos eficientes que optimicen el rendimiento y la funcionalidad de diversas máquinas y sistemas.",
   },
   {
     avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />,
-    name: 'Travis Howard',
-    occupation: 'Lead Product Designer',
+    name: "Travis Howard",
+    occupation: "Lead Product Designer",
     testimonial:
-      "One of the standout features of this product is the exceptional customer support. In my experience, the team behind this product has been quick to respond and incredibly helpful. It's reassuring to know that they stand firmly behind their product.",
+      "En este taller intensivo, liderado por la experta Mtra. Doris Flores, explorarás técnicas avanzadas de optimización utilizadas en ambientes industriales y de producción. Aprenderás a mejorar la eficiencia y productividad de los procesos mediante el uso de herramientas y metodologías de vanguardia. Este curso está diseñado para proporcionar una comprensión profunda de los métodos de optimización que pueden ser aplicados inmediatamente en entornos de trabajo reales.",
   },
   {
     avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />,
-    name: 'Cindy Baker',
-    occupation: 'CTO',
+    name: "Cindy Baker",
+    occupation: "CTO",
     testimonial:
-      'The level of simplicity and user-friendliness in this product has significantly simplified my life. I appreciate the creators for delivering a solution that not only meets but exceeds user expectations.',
+      "Adéntrate en el mundo de la ciberseguridad con este taller integral dirigido por el experto Mtro. Víctor Mañón. En este curso, aprenderás sobre las últimas tendencias y tecnologías en la protección de la información digital. El taller cubre desde conceptos básicos hasta estrategias avanzadas para defenderse contra ciberataques y asegurar infraestructuras críticas.",
   },
   {
     avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/4.jpg" />,
-    name: 'Julia Stewart',
-    occupation: 'Senior Engineer',
+    name: "Julia Stewart",
+    occupation: "Senior Engineer",
     testimonial:
-      "I appreciate the attention to detail in the design of this product. The small touches make a big difference, and it's evident that the creators focused on delivering a premium experience.",
+      "Explora las técnicas de biotecnología aplicadas al cultivo de plantas en un entorno controlado en este fascinante taller dirigido por la Dra. Liliana Santos. Aprenderás sobre las metodologías avanzadas de cultivo in vitro, una herramienta esencial para la investigación y producción agrícola sostenible. Este taller ofrece una oportunidad única para entender cómo las plantas pueden ser cultivadas desde células individuales en condiciones de laboratorio, optimizando recursos y maximizando resultados.",
   },
   {
     avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/5.jpg" />,
-    name: 'John Smith',
-    occupation: 'Product Designer',
+    name: "John Smith",
+    occupation: "Product Designer",
     testimonial:
-      "I've tried other similar products, but this one stands out for its innovative features. It's clear that the makers put a lot of thought into creating a solution that truly addresses user needs.",
+      "Adéntrate en el fascinante mundo de las biorreacciones en este taller práctico, dirigido por el experimentado Mtro. C Juan Cruz. Este taller te introducirá a las técnicas y procesos fundamentales de la biorreacción, esenciales en diversas áreas de la biotecnología y la ingeniería química. Aprenderás a manejar reactores biológicos y a optimizar procesos biotecnológicos que son clave para la producción de bio-productos.",
   },
   {
     avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
-    name: 'Daniel Wolf',
-    occupation: 'CDO',
+    name: "Daniel Wolf",
+    occupation: "CDO",
     testimonial:
-      "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
+      "Sumérgete en el estudio científico de cómo los productos son percibidos por los sentidos en este taller de análisis sensorial dirigido por la experta Dra. Mariel Calderón. Aprenderás a evaluar y cuantificar las reacciones sensoriales a diferentes productos, una habilidad crucial en industrias como la alimentaria, cosmética y farmacéutica. Este taller te proporcionará las técnicas necesarias para diseñar, ejecutar y analizar estudios sensoriales, así como interpretar y comunicar los resultados de manera efectiva.",
   },
 ];
 
-const whiteLogos = [
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d520d0517ae8e8ddf13_Bern-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f46794c159024c1af6d44_Montreal-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e891fa22f89efd7477a_TerraLight.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a09d1f6337b1dfed14ab_colorado-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5caa77bf7d69fb78792e_Ankara-white.svg',
+const talleres = [
+  DiseñoMecanismos,
+  optimizacionIndustria,
+  laboratorioITC,
+  cultivoVegetal,
+  bioReaccion,
+  analisisSensorial,
+  creayProgramaRobot,
 ];
 
-const darkLogos = [
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628889c3bdf1129952dc_Sydney-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d4d8b829a89976a419c_Bern-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f467502f091ccb929529d_Montreal-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e911fa22f2203d7514c_TerraDark.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a0990f3717787fd49245_colorado-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5ca4e548b0deb1041c33_Ankara-black.svg',
-];
+// const logoStyle = {
+//   width: "64px",
+//   opacity: 0.3,
+// };
 
-const logoStyle = {
-  width: '64px',
-  opacity: 0.3,
+const tallerStyle = {
+  width: "100%",
+  height: "35rem",
 };
 
 export default function Testimonials() {
-  const theme = useTheme();
-  const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
+  // const theme = useTheme();
+  // const logos = theme.palette.mode === "light" ? darkLogos : whiteLogos;
 
   return (
     <Container
@@ -87,50 +91,67 @@ export default function Testimonials() {
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         gap: { xs: 3, sm: 6 },
       }}
     >
       <Box
         sx={{
-          width: { sm: '100%', md: '60%' },
-          textAlign: { sm: 'left', md: 'center' },
+          width: { sm: "100%", md: "60%" },
+          textAlign: { sm: "left", md: "center" },
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Testimonials
+          Talleres
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          See what our customers love about our products. Discover how we excel in
-          efficiency, durability, and satisfaction. Join us for quality, innovation,
-          and reliable support.
+          Participa en nuestros talleres interactivos y sumérgete en el mundo de
+          la innovación y la tecnología. Nuestros talleres están diseñados para
+          ofrecer una experiencia práctica inigualable, guiados por expertos en
+          cada tema. Descubre cómo nuestros productos no solo sobresalen en
+          calidad y durabilidad, sino que también están a la vanguardia de la
+          innovación tecnológica. Únete a nosotros para una experiencia
+          educativa que garantiza no solo aprender, sino también disfrutar y
+          experimentar la satisfacción de dominar nuevas habilidades.
         </Typography>
       </Box>
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
         {userTestimonials.map((testimonial, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
+          <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
             <Card
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                justifySelf: "center",
                 flexGrow: 1,
                 p: 1,
               }}
             >
               <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <img
+                  src={talleres[index]}
+                  alt={`taller ${index + 1}`}
+                  style={tallerStyle}
+                />
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{
+                    textAlign: "justify", // Adds text justification
+                  }}
+                >
                   {testimonial.testimonial}
                 </Typography>
               </CardContent>
-              <Box
+              {/* <Box
                 sx={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
                   pr: 2,
                 }}
               >
@@ -144,11 +165,64 @@ export default function Testimonials() {
                   alt={`Logo ${index + 1}`}
                   style={logoStyle}
                 />
-              </Box>
+              </Box> */}
             </Card>
           </Grid>
         ))}
       </Grid>
+      <Card
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          justifySelf: "center",
+          flexGrow: 1,
+          width: {
+            xs: "100%", // ancho del 100% en pantallas extra pequeñas
+            sm: "60%", // ancho del 60% en pantallas pequeñas
+            md: "32%", // ancho del 32% en pantallas medianas y grandes
+          },
+          p: 1,
+        }}
+      >
+        <CardContent>
+          <img src={talleres[6]} alt={`taller ${7}`} style={tallerStyle} />
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              textAlign: "justify", // Adds text justification
+            }}
+          >
+            Sumérgete en el emocionante mundo de la robótica en este taller
+            interactivo dirigido por la Mtra. Karla Camacho. En este curso,
+            aprenderás a construir y programar tu propio robot desde cero,
+            utilizando tecnología de vanguardia y software de programación líder
+            en la industria. Este taller está diseñado para inspirar creatividad
+            y fomentar habilidades en ingeniería y programación, todo a través
+            de la construcción de proyectos prácticos y dinámicos.
+          </Typography>
+        </CardContent>
+        {/* <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  pr: 2,
+                }}
+              > */}
+        {/* <CardHeader
+                  avatar={testimonial.avatar}
+                  title={testimonial.name}
+                  subheader={testimonial.occupation}
+                />
+                <img
+                  src={logos[index]}
+                  alt={`Logo ${index + 1}`}
+                  style={logoStyle}
+                />
+              </Box> */}
+      </Card>
     </Container>
   );
 }

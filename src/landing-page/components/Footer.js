@@ -1,70 +1,81 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import InputLabel from '@mui/material/InputLabel';
-import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+// import IconButton from "@mui/material/IconButton";
+// import InputLabel from "@mui/material/InputLabel";
+import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
+// import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
-import { visuallyHidden } from '@mui/utils';
+import IngeniusLogo from "../../images/logo-sin-texto.png";
 
-import FacebookIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
+// import { visuallyHidden } from "@mui/utils";
 
-import SitemarkIcon from './SitemarkIcon';
+// import FacebookIcon from "@mui/icons-material/GitHub";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import TwitterIcon from "@mui/icons-material/X";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" mt={1}>
-      {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
+// import SitemarkIcon from "./SitemarkIcon";
+
+// function Copyright() {
+//   return (
+//     <Typography variant="body2" color="text.secondary" mt={1}>
+//       {"Copyright © "}
+//       <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+//       {new Date().getFullYear()}
+//     </Typography>
+//   );
+// }
 
 export default function Footer() {
   return (
     <Container
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         gap: { xs: 4, sm: 8 },
         py: { xs: 8, sm: 10 },
-        textAlign: { sm: 'center', md: 'left' },
+        textAlign: { sm: "center", md: "left" },
       }}
     >
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          width: '100%',
-          justifyContent: 'space-between',
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          width: "100%",
+          justifyContent: "space-between",
         }}
       >
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
+            display: "flex",
+            flexDirection: "column",
             gap: 4,
-            minWidth: { xs: '100%', sm: '60%' },
+            minWidth: { xs: "100%", sm: "60%" },
           }}
         >
-          <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <SitemarkIcon />
-            <Typography variant="body2" fontWeight={600} gutterBottom sx={{ mt: 2 }}>
-              Join the newsletter
+          <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
+            <img
+              src={IngeniusLogo}
+              alt="ingeius-logo"
+              style={{ width: "6rem", marginRight: "1rem" }}
+            />
+            <Typography
+              variant="body2"
+              fontWeight={600}
+              gutterBottom
+              sx={{ mt: 2 }}
+            >
+              Donde se conecta el ingenio y la innovación
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              Subscribe for weekly updates. No spams ever!
+              ¡Acude a nuestro a evento para una experiencia inolvidable!
             </Typography>
             <Stack direction="row" spacing={1} useFlexGap>
-              <InputLabel htmlFor="email-newsletter" sx={visuallyHidden}>
+              {/* <InputLabel htmlFor="email-newsletter" sx={visuallyHidden}>
                 Email
               </InputLabel>
               <TextField
@@ -76,46 +87,56 @@ export default function Footer() {
                 aria-label="Enter your email address"
                 placeholder="Your email address"
                 inputProps={{
-                  autoComplete: 'off',
-                  'aria-label': 'Enter your email address',
+                  autoComplete: "off",
+                  "aria-label": "Enter your email address",
                 }}
-              />
-              <Button variant="contained" color="primary" sx={{ flexShrink: 0 }}>
-                Subscribe
+              /> */}
+              <Button
+                variant="contained"
+                color="primary"
+                sx={{ flexShrink: 0 }}
+                onClick={() =>
+                  window.open(
+                    "https://www.eventbrite.com.mx/e/ingenius-tickets-901726427017?aff=oddtdtcreator",
+                    "_blank"
+                  )
+                }
+              >
+                ¡Compra tu boleto!
               </Button>
             </Stack>
           </Box>
         </Box>
         <Box
           sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
+            display: { xs: "none", sm: "flex" },
+            flexDirection: "column",
             gap: 1,
           }}
         >
           <Typography variant="body2" fontWeight="medium">
-            Product
+            Producto
           </Typography>
           <Link color="text.secondary" variant="body2" href="#">
-            Features
+            Panelistas
           </Link>
           <Link color="text.secondary" variant="body2" href="#">
-            Testimonials
+            Talleres
           </Link>
           <Link color="text.secondary" variant="body2" href="#">
-            Highlights
+            Entradas
           </Link>
-          <Link color="text.secondary" variant="body2" href="#">
+          {/* <Link color="text.secondary" variant="body2" href="#">
             Pricing
-          </Link>
+          </Link> */}
           <Link color="text.secondary" variant="body2" href="#">
             FAQs
           </Link>
         </Box>
-        <Box
+        {/* <Box
           sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
+            display: { xs: "none", sm: "flex" },
+            flexDirection: "column",
             gap: 1,
           }}
         >
@@ -131,11 +152,11 @@ export default function Footer() {
           <Link color="text.secondary" variant="body2" href="#">
             Press
           </Link>
-        </Box>
-        <Box
+        </Box> */}
+        {/* <Box
           sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
+            display: { xs: "none", sm: "flex" },
+            flexDirection: "column",
             gap: 1,
           }}
         >
@@ -151,9 +172,9 @@ export default function Footer() {
           <Link color="text.secondary" variant="body2" href="#">
             Contact
           </Link>
-        </Box>
+        </Box> */}
       </Box>
-      <Box
+      {/* <Box
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -209,7 +230,7 @@ export default function Footer() {
             <LinkedInIcon />
           </IconButton>
         </Stack>
-      </Box>
+      </Box> */}
     </Container>
   );
 }

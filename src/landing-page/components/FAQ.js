@@ -1,13 +1,13 @@
-import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+// import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState(false);
@@ -22,10 +22,10 @@ export default function FAQ() {
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         gap: { xs: 3, sm: 6 },
       }}
     >
@@ -34,16 +34,16 @@ export default function FAQ() {
         variant="h4"
         color="text.primary"
         sx={{
-          width: { sm: '100%', md: '60%' },
-          textAlign: { sm: 'left', md: 'center' },
+          width: { sm: "100%", md: "60%" },
+          textAlign: { sm: "left", md: "center" },
         }}
       >
-        Frequently asked questions
+        Preguntas Frecuentes
       </Typography>
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: "100%" }}>
         <Accordion
-          expanded={expanded === 'panel1'}
-          onChange={handleChange('panel1')}
+          expanded={expanded === "panel1"}
+          onChange={handleChange("panel1")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -51,25 +51,25 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              ¿Cómo puedo inscribirme en los talleres?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              You can reach our customer support team by emailing
-              <Link> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              Para inscribirte en los talleres, simplemente selecciona el taller
+              de tu interés durante el proceso de compra de tu entrada.
+              Asegúrate de verificar la disponibilidad, ya que los cupos son
+              limitados y se asignan por orden de inscripción.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded === 'panel2'}
-          onChange={handleChange('panel2')}
+          expanded={expanded === "panel2"}
+          onChange={handleChange("panel2")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -77,24 +77,25 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+              ¿Qué incluye la entrada general al evento?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              La entrada general te proporciona acceso completo a todas las
+              ponencias programadas, entrada a un taller de tu elección sujeto a
+              disponibilidad, y un kit del participante que incluye materiales
+              exclusivos y memorabilia del evento.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded === 'panel3'}
-          onChange={handleChange('panel3')}
+          expanded={expanded === "panel3"}
+          onChange={handleChange("panel3")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -102,24 +103,26 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+              ¿Puedo obtener un reembolso si no puedo asistir al evento?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              Ofrecemos reembolsos completos hasta dos semanas antes del evento.
+              Después de este período, no podemos garantizar un reembolso debido
+              a los costos asociados con la planificación del evento. Te
+              recomendamos revisar nuestra política de cancelación completa en
+              nuestro sitio web.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded === 'panel4'}
-          onChange={handleChange('panel4')}
+          expanded={expanded === "panel4"}
+          onChange={handleChange("panel4")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -127,19 +130,20 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+              ¿Qué medidas de seguridad se aplican durante el evento?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              La seguridad de nuestros asistentes es nuestra prioridad.
+              Aplicamos todas las medidas recomendadas por las autoridades de
+              salud, incluyendo control de accesos, uso obligatorio de
+              mascarillas y disponibilidad de sanitizantes. Además, el evento
+              cuenta con personal de seguridad durante todo el día.
             </Typography>
           </AccordionDetails>
         </Accordion>
