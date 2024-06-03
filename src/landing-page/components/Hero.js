@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 // import InputLabel from "@mui/material/InputLabel";
 // import Link from "@mui/material/Link";
@@ -10,7 +10,7 @@ import Stack from "@mui/material/Stack";
 
 // import { visuallyHidden } from "@mui/utils";
 import { styled } from "@mui/material/styles";
-import IngeniusLogo from "../../images/ingenius-logo.jpeg";
+// import IngeniusLogo from "../../images/ingenius-logo.jpeg";
 import ingeniusFondo from "../../images/shapingFuture.jpg";
 import mapaTec from "../../images/mapa_tec.png";
 
@@ -41,18 +41,18 @@ const StyledBox = styled("div")(({ theme }) => ({
   },
 }));
 
-const scrollToSection = (sectionId) => {
-  const sectionElement = document.getElementById(sectionId);
-  const offset = 128;
-  if (sectionElement) {
-    const targetScroll = sectionElement.offsetTop - offset;
-    sectionElement.scrollIntoView({ behavior: "smooth" });
-    window.scrollTo({
-      top: targetScroll,
-      behavior: "smooth",
-    });
-  }
-};
+// const scrollToSection = (sectionId) => {
+//   const sectionElement = document.getElementById(sectionId);
+//   const offset = 128;
+//   if (sectionElement) {
+//     const targetScroll = sectionElement.offsetTop - offset;
+//     sectionElement.scrollIntoView({ behavior: "smooth" });
+//     window.scrollTo({
+//       top: targetScroll,
+//       behavior: "smooth",
+//     });
+//   }
+// };
 
 export default function Hero() {
   return (
