@@ -8,13 +8,13 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 // import { useTheme } from "@mui/system";
-import DiseñoMecanismos from "../../images/diseñomecanismos.jpeg";
-import optimizacionIndustria from "../../images/optimizacionenindustria.jpeg";
-import laboratorioITC from "../../images/laboratorioitc.jpeg";
-import cultivoVegetal from "../../images/cultivovegetal.jpeg";
-import bioReaccion from "../../images/bioreaccion.jpeg";
-import analisisSensorial from "../../images/analisissensorial.jpeg";
-import creayProgramaRobot from "../../images/creaprogramayrobot.jpeg";
+import DiseñoMecanismos from "../../images/DiseñoMecanismosBiomiméticos.png";
+import optimizacionIndustria from "../../images/CIBERSEGURIDAD.png";
+import laboratorioITC from "../../images/CreaYProgramaTuRobot.png";
+import cultivoVegetal from "../../images/cultivoInVitro.png";
+import bioReaccion from "../../images/BIOREACCION.png";
+import analisisSensorial from "../../images/AnalisisSensorial.png";
+// import creayProgramaRobot from "../../images/creaprogramayrobot.jpeg";
 
 const userTestimonials = [
   {
@@ -68,7 +68,6 @@ const talleres = [
   cultivoVegetal,
   bioReaccion,
   analisisSensorial,
-  creayProgramaRobot,
 ];
 
 // const logoStyle = {
@@ -120,7 +119,7 @@ export default function Testimonials() {
       </Box>
       <Grid container spacing={3}>
         {userTestimonials.map((testimonial, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
+          <Grid item xs={12} sm={12} md={6} key={index} sx={{ display: "flex" }}>
             <Card
               sx={{
                 display: "flex",
@@ -137,7 +136,7 @@ export default function Testimonials() {
                   alt={`taller ${index + 1}`}
                   style={tallerStyle}
                 />
-                <Typography
+                {/* <Typography
                   variant="body2"
                   color="text.secondary"
                   sx={{
@@ -145,7 +144,7 @@ export default function Testimonials() {
                   }}
                 >
                   {testimonial.testimonial}
-                </Typography>
+                </Typography> */}
               </CardContent>
               {/* <Box
                 sx={{
@@ -170,59 +169,7 @@ export default function Testimonials() {
           </Grid>
         ))}
       </Grid>
-      <Card
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          justifySelf: "center",
-          flexGrow: 1,
-          width: {
-            xs: "100%", // ancho del 100% en pantallas extra pequeñas
-            sm: "60%", // ancho del 60% en pantallas pequeñas
-            md: "32%", // ancho del 32% en pantallas medianas y grandes
-          },
-          p: 1,
-        }}
-      >
-        <CardContent>
-          <img src={talleres[6]} alt={`taller ${7}`} style={tallerStyle} />
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{
-              textAlign: "justify", // Adds text justification
-            }}
-          >
-            Sumérgete en el emocionante mundo de la robótica en este taller
-            interactivo dirigido por la Mtra. Karla Camacho. En este curso,
-            aprenderás a construir y programar tu propio robot desde cero,
-            utilizando tecnología de vanguardia y software de programación líder
-            en la industria. Este taller está diseñado para inspirar creatividad
-            y fomentar habilidades en ingeniería y programación, todo a través
-            de la construcción de proyectos prácticos y dinámicos.
-          </Typography>
-        </CardContent>
-        {/* <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  pr: 2,
-                }}
-              > */}
-        {/* <CardHeader
-                  avatar={testimonial.avatar}
-                  title={testimonial.name}
-                  subheader={testimonial.occupation}
-                />
-                <img
-                  src={logos[index]}
-                  alt={`Logo ${index + 1}`}
-                  style={logoStyle}
-                />
-              </Box> */}
-      </Card>
+      
     </Container>
   );
 }

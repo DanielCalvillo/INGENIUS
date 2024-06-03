@@ -51,7 +51,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              ¿Cómo puedo inscribirme en los talleres?
+              ¿Cuánto tiempo dura ingenius?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -60,10 +60,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Para inscribirte en los talleres, simplemente selecciona el taller
-              de tu interés durante el proceso de compra de tu entrada.
-              Asegúrate de verificar la disponibilidad, ya que los cupos son
-              limitados y se asignan por orden de inscripción.
+              Ingenius como parte de Expoingenierias dura un dia. Las
+              actividades comienzan 8:30 am y culminan en punto de las 7 pm
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -77,7 +75,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              ¿Qué incluye la entrada general al evento?
+              ¿Que voy a aprender en ingenius?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -86,10 +84,10 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              La entrada general te proporciona acceso completo a todas las
-              ponencias programadas, entrada a un taller de tu elección sujeto a
-              disponibilidad, y un kit del participante que incluye materiales
-              exclusivos y memorabilia del evento.
+              Como parte de Ingenius aprenderás las nuevas perspectivas y
+              tendencias mundiales con un alto valor académico y profesional,
+              así como el intercambio de ideas y conocimientos entre la
+              comunidad de ingeniería y ciencia en el campus.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -103,7 +101,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              ¿Puedo obtener un reembolso si no puedo asistir al evento?
+              ¿Dónde está el PACE?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -112,11 +110,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              Ofrecemos reembolsos completos hasta dos semanas antes del evento.
-              Después de este período, no podemos garantizar un reembolso debido
-              a los costos asociados con la planificación del evento. Te
-              recomendamos revisar nuestra política de cancelación completa en
-              nuestro sitio web.
+              Se encuentra ubicado en el edificio de mecánica y comunicación en
+              el tercer piso, junto al salón —--
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -130,7 +125,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              ¿Qué medidas de seguridad se aplican durante el evento?
+              ¿Dónde está el lab invitro?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -139,11 +134,91 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: "100%", md: "70%" } }}
             >
-              La seguridad de nuestros asistentes es nuestra prioridad.
-              Aplicamos todas las medidas recomendadas por las autoridades de
-              salud, incluyendo control de accesos, uso obligatorio de
-              mascarillas y disponibilidad de sanitizantes. Además, el evento
-              cuenta con personal de seguridad durante todo el día.
+              Ubicado en el segundo piso del edificio de biotecnología el cual
+              se encuentra junto a canchas de prepa y detrás del edificio de
+              comunicación y mecánica.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel5"}
+          onChange={handleChange("panel5")}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel5d-content"
+            id="panel4d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+              ¿Qué puedo comer en ingenius?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: "100%", md: "70%" } }}
+            >
+              Se encontrarán habilitadas todas las zonas de comida en el campus,
+              sin embargo se recomienda consultar disponibilidad de horario en
+              cafetería del campus.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel6"}
+          onChange={handleChange("panel6")}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel6d-content"
+            id="panel4d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+              ¿Por qué Ingenius?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: "100%", md: "70%" } }}
+            >
+              Surge como respuesta a la necesidad de crear un espacio que
+              fomente la innovación, la sostenibilidad y la excelencia académica
+              en el Tecnológico de Monterrey Campus Toluca. A través de
+              ponencias, paneles, talleres y exposiciones estudiantiles, este
+              evento magistral se compromete a promover aprendizajes de alto
+              valor y el desarrollo de soluciones innovadoras y sostenibles
+              relevantes ante los desafíos actuales y futuros.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel7"}
+          onChange={handleChange("panel7")}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel7d-content"
+            id="panel4d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+              ¿Qué sigue despues de realizar mi registro?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: "100%", md: "70%" } }}
+            >
+              Tienes que haber comprado el boleto a través de la página oficial
+              institucional de pago. Así como llenar y enviar el formulario con
+              tu información personal y el comprobante de pago. Habiendo
+              realizado eso, debes de recibir confirmación de tu registro a
+              partir del 6 de junio, si es que no recibes ningun correo, favor
+              de contactar al contacto oficial seeic.tectol@gmail.com
             </Typography>
           </AccordionDetails>
         </Accordion>

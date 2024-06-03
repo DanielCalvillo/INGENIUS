@@ -11,7 +11,8 @@ import Stack from "@mui/material/Stack";
 // import { visuallyHidden } from "@mui/utils";
 import { styled } from "@mui/material/styles";
 import IngeniusLogo from "../../images/ingenius-logo.jpeg";
-import ingeniusFondo from "../../images/shaping-future.jpg";
+import ingeniusFondo from "../../images/shapingFuture.jpg";
+import mapaTec from "../../images/mapa_tec.png";
 
 const StyledBox = styled("div")(({ theme }) => ({
   alignSelf: "center",
@@ -81,20 +82,30 @@ export default function Hero() {
           useFlexGap
           sx={{ width: { xs: "100%", sm: "70%" } }}
         >
-          <img src={IngeniusLogo} alt="MDN" style={{ width: "100%" }} />
+          <h3 style={{ textAlign: "justify" }}>
+            INGENIUS Congreso y Expoingenierías es un evento magistral que reúne
+            a estudiantes, académicos y profesionales del campo de la ingeniería
+            y la ciencia para intercambiar ideas y conocimientos de alto valor.
+            A través de ponencias, paneles, talleres y exposiciones
+            estudiantiles, el congreso se dedica a fomentar la innovación, la
+            sostenibilidad y la excelencia académica. Este evento se compromete
+            a promover aprendizajes significativos y a desarrollar soluciones
+            innovadoras y sostenibles frente a los desafíos actuales y futuros.
+          </h3>
           <Stack
-            direction={{ xs: "column", sm: "row" }}
+            direction={{ xs: "column", sm: "column" }}
             spacing={1}
             useFlexGap
             sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
           >
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => scrollToSection("features")}
-            >
-              Cuentame más
-            </Button>
+            <h1 style={{ textAlign: "center", marginTop: "0rem" }}>
+              13 de Junio 2024
+            </h1>
+            <img
+              src={mapaTec}
+              alt="MDN"
+              style={{ width: "100%" }}
+            />
           </Stack>
         </Stack>
         <StyledBox id="image" />

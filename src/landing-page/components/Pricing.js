@@ -173,12 +173,12 @@ export default function Pricing() {
                 <Button
                   fullWidth
                   variant={tier.buttonVariant}
-                  onClick={() =>
-                    window.open(
-                      "https://www.eventbrite.com.mx/e/ingenius-tickets-901726427017?aff=oddtdtcreator",
-                      "_blank"
-                    )
-                  }
+                  // onClick={() =>
+                  //   window.open(
+                  //     "https://www.eventbrite.com.mx/e/ingenius-tickets-901726427017?aff=oddtdtcreator",
+                  //     "_blank"
+                  //   )
+                  // }
                 >
                   {tier.buttonText}
                 </Button>

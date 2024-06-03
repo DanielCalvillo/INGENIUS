@@ -136,7 +136,7 @@ function AppAppBar({ mode, toggleColorMode }) {
             }}
           >
             {/* <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} /> */}
-            <Button
+            {/* <Button
               color="primary"
               variant="contained"
               size="small"
@@ -148,7 +148,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               }
             >
               Compra tu boleto
-            </Button>
+            </Button> */}
           </Box>
           <Box sx={{ display: { sm: "flex", md: "none" } }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
