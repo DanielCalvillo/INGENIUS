@@ -91,7 +91,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 size="small"
                 onClick={() => scrollToSection("features")}
               >
-                Panelistas
+                Ponentes
               </Button>
               <Button
                 variant="text"
@@ -136,19 +136,19 @@ function AppAppBar({ mode, toggleColorMode }) {
             }}
           >
             {/* <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} /> */}
-            {/* <Button
+            <Button
               color="primary"
               variant="contained"
               size="small"
               onClick={() =>
                 window.open(
-                  "https://www.eventbrite.com.mx/e/ingenius-tickets-901726427017?aff=oddtdtcreator",
+                  "https://bit.ly/INGENIUS_2024 ",
                   "_blank"
                 )
               }
             >
-              Compra tu boleto
-            </Button> */}
+              Registrate Ya!
+            </Button>
           </Box>
           <Box sx={{ display: { sm: "flex", md: "none" } }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
@@ -178,7 +178,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 </Box>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem onClick={() => scrollToSection("features")}>
-                  Panelistas
+                  Ponentes
                 </MenuItem>
                 <MenuItem onClick={() => scrollToSection("testimonials")}>
                   Talleres

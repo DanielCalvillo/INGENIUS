@@ -97,12 +97,12 @@ export default function Footer() {
                 sx={{ flexShrink: 0 }}
                 onClick={() =>
                   window.open(
-                    "https://www.eventbrite.com.mx/e/ingenius-tickets-901726427017?aff=oddtdtcreator",
+                    "https://bit.ly/INGENIUS_2024",
                     "_blank"
                   )
                 }
               >
-                ¡Compra tu boleto!
+                REGISTRATE YA!
               </Button>
             </Stack>
           </Box>
@@ -118,7 +118,7 @@ export default function Footer() {
             Producto
           </Typography>
           <Link color="text.secondary" variant="body2" href="#">
-            Panelistas
+            Ponentes
           </Link>
           <Link color="text.secondary" variant="body2" href="#">
             Talleres

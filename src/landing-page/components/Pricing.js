@@ -12,17 +12,18 @@ import Typography from "@mui/material/Typography";
 
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
+import banner from "../../images/bannerIngenius.png";
 
 const tiers = [
   {
-    title: "ENTRADA GENERAL",
+    title: "ACCESO GENERAL",
     price: "200",
     description: [
       "Acceso a ponencias",
-      "Entrada a taller",
-      "Kit del participante",
+      "Entrada a taller de preferencia",
+      "Paneles",
     ],
-    buttonText: "¡Cómpralo ya!",
+    buttonText: "Registrate Ya!",
     buttonVariant: "contained",
   },
 ];
@@ -41,6 +42,13 @@ export default function Pricing() {
         gap: { xs: 3, sm: 6 },
       }}
     >
+      <Box >
+                  <img
+                    src={banner}
+                    alt="MDN"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </Box>
       <Box
         sx={{
           width: { sm: "100%", md: "60%" },
@@ -48,7 +56,7 @@ export default function Pricing() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Precios
+          Accesos
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Invierte en tu crecimiento personal y profesional con nuestro acceso
@@ -173,12 +181,12 @@ export default function Pricing() {
                 <Button
                   fullWidth
                   variant={tier.buttonVariant}
-                  // onClick={() =>
-                  //   window.open(
-                  //     "https://www.eventbrite.com.mx/e/ingenius-tickets-901726427017?aff=oddtdtcreator",
-                  //     "_blank"
-                  //   )
-                  // }
+                  onClick={() =>
+                    window.open(
+                      "https://bit.ly/INGENIUS_2024",
+                      "_blank"
+                    )
+                  }
                 >
                   {tier.buttonText}
                 </Button>

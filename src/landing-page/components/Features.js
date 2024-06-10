@@ -15,23 +15,23 @@ import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 // import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
-import LuisGerardo from "../../images/luisGerardo.jpeg";
-import adanRamirez from "../../images/adan-ramirez.jpeg";
+import LuisGerardo from "../../images/ponenteOne.PNG";
+import adanRamirez from "../../images/ponenteTwo.PNG";
 
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: "Luis Gerardo carvajal",
+    title: "Andrea Remes",
     description:
-      "Ingeniero mecatrónico. Especialista en operaciones de sostenibilidad de Siemens Energy",
+      "Co-Founder Erandi Aprende | Halcyon & YLAI Fellow | GenU GLC | European Commission YSB",
     imageLight: `url(${LuisGerardo})`,
     imageDark: `url(${LuisGerardo})`,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: "Adan Ramírez Sánchez",
+    title: "Daniel Dominguez Gómez",
     description:
-      "Cofundador y director ejecutivo de Greenfluidics, una startup de biotecnología que busca acelerar la transición de ciudades sostenibles y trazar la sostenibilidad al espacio.",
+      "Biotech Catalyst & Leader | Driving the bio-revolution as Chief Ecosystem Officer at Allbiotech | YLAI Fellow 2022.",
     imageLight: `url(${adanRamirez})`,
     imageDark: `url(${adanRamirez})`,
   },
@@ -67,7 +67,7 @@ export default function Features() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Panelistas
+              Ponentes
             </Typography>
             <Typography
               variant="body1"
@@ -75,7 +75,7 @@ export default function Features() {
               sx={{ mb: { xs: 2, sm: 4 }, textAlign: "justify" }}
             >
               Descubre la riqueza del conocimiento y la experiencia que nuestros
-              distinguidos panelistas traen al evento INGENIUS. Cada uno de
+              distinguidos Ponentes traen al evento INGENIUS. Cada uno de
               ellos ha sido seleccionado por su destacada contribución en el
               campo de la ingeniería y la innovación tecnológica. Aprovecha la
               oportunidad de interactuar y aprender de expertos que están
