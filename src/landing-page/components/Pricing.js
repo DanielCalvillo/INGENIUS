@@ -17,7 +17,7 @@ import banner from "../../images/bannerIngenius.png";
 const tiers = [
   {
     title: "ACCESO GENERAL",
-    price: "200",
+    price: "GRATUITO",
     description: [
       "Acceso a ponencias",
       "Entrada a taller de preferencia",
@@ -132,9 +132,7 @@ export default function Pricing() {
                   <Typography component="h3" variant="h2">
                     ${tier.price}
                   </Typography>
-                  <Typography component="h3" variant="h6">
-                    &nbsp; por persona
-                  </Typography>
+                
                 </Box>
                 <Divider
                   sx={{
