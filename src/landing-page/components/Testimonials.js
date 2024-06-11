@@ -8,12 +8,12 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 // import { useTheme } from "@mui/system";
-import DiseñoMecanismos from "../../images/DiseñoMecanismosBiomiméticos.png";
-import optimizacionIndustria from "../../images/CIBERSEGURIDAD.png";
-import laboratorioITC from "../../images/CreaYProgramaTuRobot.png";
-import cultivoVegetal from "../../images/cultivoInVitro.png";
-import bioReaccion from "../../images/BIOREACCION.png";
-import analisisSensorial from "../../images/AnalisisSensorial.png";
+import DiseñoMecanismos from "../../images/cultivo_invitro.PNG";
+import optimizacionIndustria from "../../images/diseño_mecanismos.PNG";
+import laboratorioITC from "../../images/arduino_nuevo.PNG";
+import cultivoVegetal from "../../images/ciberseguridad_encripcion.png";
+import bioReaccion from "../../images/optimizacion_industria.PNG";
+import analisisSensorial from "../../images/biorreacion.png";
 // import creayProgramaRobot from "../../images/creaprogramayrobot.jpeg";
 
 const userTestimonials = [
