@@ -10,10 +10,10 @@ import Grid from "@mui/material/Grid";
 // import { useTheme } from "@mui/system";
 import DiseñoMecanismos from "../../images/cultivo_invitro.PNG";
 import optimizacionIndustria from "../../images/diseño_mecanismos.PNG";
-import laboratorioITC from "../../images/arduino_nuevo.PNG";
-import cultivoVegetal from "../../images/ciberseguridad_encripcion.png";
+import laboratorioITC from "../../images/ardino_nuevo.PNG";
+import cultivoVegetal from "../../images/ciberseguridad_encripcion.PNG";
 import bioReaccion from "../../images/optimizacion_industria.PNG";
-import analisisSensorial from "../../images/biorreacion.png";
+import analisisSensorial from "../../images/biorreaccion.PNG";
 // import creayProgramaRobot from "../../images/creaprogramayrobot.jpeg";
 
 const userTestimonials = [
